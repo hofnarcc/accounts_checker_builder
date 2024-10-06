@@ -1,0 +1,18 @@
+
+                             - 2Captcha (THIS OPTION = REQUIRED FOR MOST WEBSITES THAT HAVE CAPTCHA SECURITY):
+                       https://chromewebstore.google.com/detail/captcha-solver-auto-recog/ifibfemgeogfhoebkmokieepdoobkbpo
+
+                                                            2Captcha (OPTIONAL):
+                 https://2captcha.com/proxy - If targeted website has good security, try and use the Proxy service that 2Captcha offers
+                                                           (http, https, socks5).
+
+                                                            2Captcha (OPTIONAL):
+               https://2captcha.com/setting/edit - CONFIGURE PARAMETERS VALUES FOR THE PEOPLE / WORKERS WHO WILL SOLVE THE GIVEN CAPTCHAS,
+                                    (ONLY EDIT IF REQUIRED. MAKE SURE TO SET CORRECT SETTINGS FOR THIS TO WORK!)
+
+        - Random User-Agent (Switcher) - https://chromewebstore.google.com/detail/random-user-agent-switche/einpaelgookohagofgnnkcfjbkkgepnp
+       (If targeted website has good security, try and use the Random User-Agent (Switcher) to get a random User-Agent on each account check).
+
+                - Cookie Auto Delete - https://chromewebstore.google.com/detail/cookie-auto-delete/kceglpglilklghkgofolieongaolnaob
+               (If targeted website keeps logging in to the same account, then this Extension will be useful to configure & use).
+
