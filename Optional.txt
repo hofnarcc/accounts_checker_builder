@@ -1,0 +1,14 @@
+https://chromewebstore.google.com/detail/auto-clicker-autofill/iapifmceeokikomajpccajhjpacjmibe
+
+
+
+
+ 
+
+          - SelectorsHub - XPath Helper - https://chromewebstore.google.com/detail/selectorshub-xpath-helper/ndgimibanhlabgdgjcpbbndiehljcpfh
+                                             (For easy exporting the CSS Selector details).
+
+                          - Tampermonkey - https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+                                        (Can be used to run extra scripts inside the browser
+                               Almost any error that you encounter could be fixed by using this advanced chrome extension.
+                       1 example could be to create a script that Accept Cookies automatically when a cookie banner pops up.)
