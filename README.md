@@ -1,56 +1,43 @@
-Introducing the ULTIMATE account checker builder..
+# HOFNAR05 Universal Account Checker Builder 📢💻
+
+<a href="https://t.me/hofnar05_Dark_GPT"><img src="https://i.ibb.co/Gckwdr6/HOFNAR05-UNIVERSAL-ACCOUNT-CHECKER-BUILDER-text.gif" alt="HOFNAR05" border="0"></a>
+<a href="https://hofnar05.club"><img src="https://i.ibb.co/j5Ksp2Y/gpt.gif" alt="gpt" border="0"></a>
 
 
 
-the HOFNAR05 Universal Account Checker [BUILDER] 📢💻
+Say goodbye to the frustrating search for active configs across platforms. It's time to embrace efficiency! 🤔 🌟
 
-Are you tired of searching for configs across different platforms, wondering which ones are still active? 🤔
+**Build custom configs effortlessly, no coding needed!**
 
-Say goodbye to the hassle and hello to efficiency! 🌟
+Our cutting-edge AI-powered Python script simplifies account validation on modern platforms:
 
-**Build your own config! [NO CODING REQUIRED!!!]**
+- Paypal 💳
+- Card shops 🛒
+- Banks 🏦
 
-With our 100% AI-generated Python script, you can effortlessly check the validity of your accounts on modern sites:
+## How It Works
+- **User-Friendly GUI:** An intuitive interface for easy configuration. Input website links, CSS selectors, and credentials.
+- **Selenium Integration:** Selenium launches Chrome, navigates to sites, and checks credentials.
+- **Custom Validity Checks:** Define custom valid links with wildcards. If the URL matches, the account is valid, ideal for dynamic URLs.
+- **Database Management:** Store checked accounts locally in SQLite for quick access.
+- **Proxy Support:** Manage proxies - enable, import, and rotate for anonymity.
+- **Python Compatibility:** Ensure compatibility and get guidance for upgrades.
 
-- Paypal
-- Card shops
-- Banks
+## Additional Features 📣
+- **Import/Export Configs:** Save and load configurations effortlessly.
+- **Speed Control:** Adjust checking speed as needed.
+- **Error Handling:** Robust error handling provides clear feedback.
 
-**Here’s how it works:**
-- **User-Friendly GUI:**
-  An intuitive GUI makes configuration easy. Input website links, CSS selectors, and credentials, and you’re good to go!
+**HOFNAR05 Universal Account Checker Builder** simplifies account checking, making it a breeze! 💻🔒
 
-- **Selenium Integration:**
-  The script utilizes Selenium to open a Chrome browser, navigate to specified sites, and verify login credentials.
+Create configs in minutes, saving valuable time! ⌛
 
-- **Custom Validity Checks:**
-  Define custom valid links using wildcard matching. If the URL pattern matches, the account is considered valid, which is particularly useful for dynamic URLs.
+Start using it now and enhance your online security! 🌐🚀
 
-- **Database Management:**
-  The tool efficiently manages checked accounts, storing them in a local SQLite database, saving you time and effort.
+**Highlight:** This tool is free, open-source, and includes video tutorials! 📹
 
-- **Proxy Support:**
-  We've included proxy support with options to enable, import proxy lists, and rotate proxies for enhanced anonymity.
+[DOWNLOAD NOW](https://t.me/hofnar05_Dark_GPT/46/50404)
 
-- **Python Compatibility:**
-  We ensure compatibility by checking your Python version and guiding you through the upgrade process if needed.
 
-**And there’s more!** 📣
-- **Import/Export Configs:**
-  Easily save and load configurations for different scenarios.
 
-- **Speed Control:**
-  Adjust the checking speed to match your preferences and website requirements.
-
-- **Error Handling:**
-  Our robust error handling system provides clear and concise feedback, ensuring a seamless user experience.
-
-HOFNAR05 Universal Account Checker [BUILDER] simplifies account checking, making it both easy and efficient! 💻🔒
-
-Create configs in minutes, saving you hours of manual work!
-
-Start using it today and enhance your online security! 🌐🚀
-
-**HIGHLIGHT:** THIS TOOL IS 100% FREE, OPEN-SOURCE, AND INCLUDES INSTRUCTIONAL VIDEOS!!!
-
-DOWNLOAD LINK: https://t.me/hofnar05_Dark_GPT/46/50404
+We appreciate contributions, feedback, and suggestions! 🌟
