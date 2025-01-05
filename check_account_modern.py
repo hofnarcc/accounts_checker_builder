@@ -292,7 +292,7 @@ def check_account(account, browser, website_link, valid_link, db_name, custom_va
 def check_accounts_logic(accounts, browser, website_link, valid_link, db_name, custom_valid_link, proxy_address=None, proxy_port=None, proxy_enabled=False):
     found_valid_account = False
 
-    user_data_dir = r"C:\Users\WormGPT\AppData\Local\Google\Chrome\User Data"
+    user_data_dir = r"C:/Users/CRACKING-BOX/AppData/Local/Google/Chrome/User Data/Profile 1"
 
     # Create ChromeOptions *once* outside the loop
     options = webdriver.ChromeOptions()
@@ -365,7 +365,7 @@ def add_chromedriver_to_path():
 def gui_check_accounts():
     global css_selector_email, css_selector_password, css_selector_submit, speed_percentage, use_same_session, website_target_link, website_valid_link, css_selector_next_button, custom_valid_link, proxy_address, proxy_port, proxy_enabled
     
-    user_data_dir = r"C:\Users\WormGPT\AppData\Local\Google\Chrome\User Data"
+    user_data_dir = r"C:/Users/CRACKING-BOX/AppData/Local/Google/Chrome/User Data/Profile 1"
 
     website_target_link = entry_target_link.get()
     website_valid_link = entry_valid_link.get()

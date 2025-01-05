@@ -76,6 +76,7 @@ script_paths = [
     "check_account.py",
     "CONFIG_modern.py",
     "check_account_modern.py"
+    "ULTIMATE-CHECKER.py"
 ]
 
 # GUI setup

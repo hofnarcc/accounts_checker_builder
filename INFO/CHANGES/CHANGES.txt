@@ -1,0 +1,119 @@
+## **Changes from Version 2 to Version 3**
+
+### **1. **General Enhancements***
+- **Code Organization:**
+  - **Modularization:** The code has been reorganized into more modular functions and classes for better readability and maintainability.
+  - **Class Introduction:** A `CreateToolTip` class has been added to handle tooltips for GUI elements, improving user interaction.
+
+- **Error Handling:**
+  - **Improved Exception Handling:** Enhanced exception handling to provide more informative error messages and user feedback.
+  - **Graceful Shutdown:** Added mechanisms to gracefully close browsers and handle interruptions (e.g., pause/resume, force stop).
+
+- **User Experience:**
+  - **Progress Indicators:** Enhanced countdown sleep functions with progress indicators and pause/resume capabilities.
+  - **User Prompts:** Added message boxes and tooltips to guide users through the process.
+
+### **2. **GUI Enhancements***
+- **Tabbed Interface:**
+  - **Notebook Widget:** Introduced a `ttk.Notebook` to organize settings into multiple tabs, making the interface more intuitive.
+  - **Tabs Added:**
+    - **General Settings:** Required fields for account checking.
+    - **Invalid Account Implementation:** Settings for detecting invalid accounts.
+    - **CAPTCHA Incorrect Implementation:** Settings for handling incorrect CAPTCHAs.
+    - **Proxy Settings:** Options for proxy usage.
+    - **Browser Settings:** Advanced browser configurations.
+    - **Advanced Settings:** Additional options like extensions, notifications, etc.
+    - **Chromedriver Arguments:** Custom arguments for Chromedriver.
+    - **Mouse Click Automation:** Automated mouse clicks for specific actions.
+    - **Configuration Menu:** Options to create, import, export, and reset configurations.
+
+- **Placeholder Text:**
+  - **Entry Fields:** Added placeholder text to guide users on what to input in each field.
+
+- **Dynamic GUI Elements:**
+  - **Mouse Click Actions:** Added functionality to dynamically add and remove mouse click actions.
+  - **Chromedriver Arguments:** Users can add and remove custom arguments for Chromedriver.
+
+- **Button States:**
+  - **Control Buttons:** Added pause/resume and force stop buttons to control the account checking process.
+  - **State Management:** Buttons are enabled/disabled based on the current state of the process (e.g., disabling "Check Accounts" while a check is in progress).
+
+### **3. **Browser and Account Checking Enhancements***
+- **Browser Management:**
+  - **Undetected ChromeDriver:** Updated to use `undetected-chromedriver` for better undetection on modern websites.
+  - **Profile Selection:** Enhanced profile selection with a GUI dialog.
+  - **Browser Cleanup:** Added an option to clean browser data after each account check.
+  - **Incognito Mode:** Option to run the browser in incognito mode.
+  - **Extensions:** Added support for loading Chrome extensions from a specified folder.
+
+- **Account Checking Logic:**
+  - **Dynamic Settings:** Account checking logic now supports dynamic settings like custom user agents, mouse clicks, and proxy modes.
+  - **Proxy Handling:** Improved proxy handling with options for static and rotating proxies.
+  - **Error Detection:** Enhanced error detection for invalid accounts and incorrect CAPTCHAs.
+  - **Screenshot Capturing:** Added functionality to capture screenshots of valid accounts and save additional information (e.g., username, balance).
+
+- **Selenium Enhancements:**
+  - **Element Interactions:** Improved element interactions with better error handling and scrolling into view if necessary.
+  - **Timeouts:** Enhanced timeouts and exception handling for element presence and click actions.
+
+### **4. **Configuration Management***
+- **JSON Configuration:**
+  - **Config File:** Switched from text-based configuration files to JSON format for better structure and ease of use.
+  - **Load/Save Configurations:** Added functions to create, import, export, and save configuration states.
+
+- **Default Settings:**
+  - **Reset Functionality:** Added a reset function to revert all settings to their default values.
+
+### **5. **Additional Features***
+- **Custom User Agents:**
+  - **File Selection:** Added functionality to select a file containing custom user agents.
+
+- **Mouse Click Automation:**
+  - **Dynamic Frames:** Users can dynamically add and remove mouse click actions with coordinates and intervals.
+
+- **Chromedriver Arguments:**
+  - **Dynamic Management:** Users can add and remove custom arguments for Chromedriver, with tooltips providing guidance.
+
+- **Time Adjustments:**
+  - **Sleep Durations:** Added sleep duration fields for different stages of account checking (e.g., email, password, submit).
+
+### **6. **Libraries and Dependencies***
+- **Updated Imports:**
+  - **PIL for Screenshots:** Added `PIL` for capturing screenshots.
+  - **PyAutoGUI for Mouse Actions:** Added `pyautogui` for automated mouse clicks.
+  - **Webdriver Manager:** Used `webdriver-manager` to automatically manage Chromedriver installations.
+
+- **Removed Unused Imports:**
+  - **Seleniumwire:** Removed `seleniumwire` as it was not used in the final version.
+
+### **7. **Performance and Optimization***
+- **Threading:**
+  - **Background Tasks:** Moved account checking logic to a separate thread to prevent the GUI from freezing during long-running processes.
+
+- **Resource Management:**
+  - **Graceful Shutdown:** Ensured browsers are closed gracefully to free up resources.
+  - **Event Control:** Used threading events (`pause_event`, `stop_event`) to control the execution flow.
+
+### **8. **Security and Best Practices***
+- **Input Validation:**
+  - **Speed Validation:** Added input validation for speed percentage to ensure it is within the valid range (0-1000).
+  - **Proxy Validation:** Added validation for proxy formats (e.g., handling both authenticated and non-authenticated proxies).
+
+- **Error Messages:**
+  - **Informative Feedback:** Provided informative error messages and user prompts throughout the script.
+
+- **Security Prompts:**
+  - **Python Version Check:** Added a prompt to download the required Python version if it is not installed.
+
+---
+
+## **Summary of Major Changes**
+
+1. **Modular Code Structure:** Improved code organization with functions and classes.
+2. **Enhanced GUI:** Introduced a tabbed interface with tooltips and dynamic GUI elements.
+3. **Advanced Browser Control:** Added options for incognito mode, extensions, and browser cleanup.
+4. **Improved Account Checking:** Enhanced error detection and support for custom user agents and mouse clicks.
+5. **Configuration Management:** Switched to JSON configuration files for better structure.
+6. **Additional Features:** Added support for custom user agents, mouse click automation, and Chromedriver arguments.
+7. **Performance Optimization:** Moved account checking to a separate thread to improve responsiveness.
+8. **Security Enhancements:** Added input validation and informative error messages.

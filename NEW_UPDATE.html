@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Comprehensive Changes between CODE 2 and CODE 3</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    color: #333;
+    text-align: center;
+}
+h2 {
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+ul {
+    margin-left: 20px;
+}
+li {
+    margin-bottom: 12px;
+}
+.added {
+    background-color: #e0ffe0;
+    padding: 10px;
+    border-left: 5px solid #28a745;
+    border-radius: 3px;
+}
+.modified {
+    background-color: #fff0b3;
+    padding: 10px;
+    border-left: 5px solid #ffc107;
+    border-radius: 3px;
+}
+.removed {
+    background-color: #ffe0e0;
+    padding: 10px;
+    border-left: 5px solid #dc3545;
+    border-radius: 3px;
+}
+code {
+    background-color: #f1f1f1;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #c7254e;
+    font-size: 90%;
+}
+</style>
+</head>
+<body>
+
+<h1>Comprehensive Changes between CODE 2 and CODE 3</h1>
+
+<h2>New Features Added</h2>
+<ul>
+    <li class="added">
+        <strong>Advanced Proxy Management:</strong> Introduced support for different proxy types (HTTP, HTTPS, SOCKS5) and modes (Static Proxies, Rotating Proxies), allowing users to select and manage proxies more flexibly.
+    </li>
+    <li class="added">
+        <strong>Mouse Click Automation:</strong> Added functionality to automate mouse clicks at specified coordinates using <code>pyautogui</code>. This is useful for handling advertisements or cookie consent pop-ups automatically.
+    </li>
+    <li class="added">
+        <strong>Custom User Agents:</strong> Implemented the ability to load custom user agents from an external TXT file. This randomizes user agent strings to mimic different browsers and devices, enhancing stealth and reducing detection.
+    </li>
+    <li class="added">
+        <strong>Chromedriver Arguments Management:</strong> Added GUI elements to allow users to add or remove custom Chromedriver command-line arguments. This provides greater control over browser behavior.
+    </li>
+    <li class="added">
+        <strong>CAPTCHA Handling:</strong> Introduced logic to detect incorrect CAPTCHA inputs and recheck the same account automatically, improving the robustness of the account checking process.
+    </li>
+    <li class="added">
+        <strong>Invalid Account Detection Enhancements:</strong> Expanded invalid account detection using multiple methods, including redirect URL checks, error/alert CSS selectors, and matching specific inner or outer HTML content.
+    </li>
+    <li class="added">
+        <strong>Browser Cleanup Option:</strong> Added an option to clean browser data (cookies, cache, localStorage, sessionStorage) after checking each account to maintain privacy and prevent data leakage.
+    </li>
+    <li class="added">
+        <strong>Incognito and Headless Modes:</strong> Provided options to run the browser in Incognito mode for enhanced privacy and Headless mode for performance benefits without a GUI.
+    </li>
+    <li class="added">
+        <strong>Configuration Management:</strong> Enhanced configuration capabilities with support for creating, importing, exporting, and saving configuration states, including all new settings and features.
+    </li>
+    <li class="added">
+        <strong>Pause/Resume and Force Stop Functionality:</strong> Added GUI buttons to pause/resume the account checking process and force stop it entirely, giving users better control over the execution flow.
+    </li>
+    <li class="added">
+        <strong>Capture Additional Account Details:</strong> Implemented the ability to capture and save additional details like username and balance using specified CSS Selectors, along with taking screenshots of valid accounts for documentation.
+    </li>
+    <li class="added">
+        <strong>Tooltip Integration:</strong> Introduced tooltips across the GUI to provide users with guidance and explanations for various inputs and controls, enhancing usability.
+    </li>
+    <li class="added">
+        <strong>Configurable Sleep Durations:</strong> Added configurable sleep durations for different stages of the account checking process (e.g., loading email field, password field, submit button) to allow customization of pacing.
+    </li>
+    <li class="added">
+        <strong>Error Handling Enhancements:</strong> Improved error handling throughout the script with more informative messages and user feedback via message boxes, ensuring users are aware of issues as they arise.
+    </li>
+</ul>
+
+<h2>Modifications Made</h2>
+<ul>
+    <li class="modified">
+        <strong>Enhanced Browser Initialization:</strong> Updated browser initialization to utilize <code>undetected-chromedriver</code> with <code>webdriver-manager</code> for automatic Chromedriver management, ensuring better compatibility and ease of use.
+    </li>
+    <li class="modified">
+        <strong>Account Checking Logic Refactoring:</strong> Refactored the account checking logic to incorporate new features like CAPTCHA handling, invalid account detection, and capturing additional account details.
+    </li>
+    <li class="modified">
+        <strong>GUI Redesign with Tabs:</strong> Redesigned the GUI layout to use a tabbed interface (<code>ttk.Notebook</code>) for organizing settings into categories such as General Settings, Invalid Account Implementation, CAPTCHA Handling, Proxy Settings, Browser Settings, Advanced Settings, Chromedriver Arguments, and Mouse Click Automation.
+    </li>
+    <li class="modified">
+        <strong>Configuration Loading and Saving:</strong> Expanded configuration loading and saving functions to handle all new settings introduced in CODE 3, ensuring comprehensive backup and restoration of user preferences.
+    </li>
+    <li class="modified">
+        <strong>User Interface Enhancements:</strong> Improved the user interface with the addition of tooltips, placeholder text for entries, and better styling for buttons and labels, making the application more user-friendly.
+    </li>
+    <li class="modified">
+        <strong>Database Schema Improvement:</strong> Enhanced the SQLite database schema by setting <code>email</code> as the primary key to prevent duplicate entries and improve data integrity.
+    </li>
+    <li class="modified">
+        <strong>Package Management Optimization:</strong> Improved package installation and upgrade checks to ensure all required packages are present and up-to-date before execution, reducing runtime errors.
+    </li>
+    <li class="modified">
+        <strong>Error Notifications via Message Boxes:</strong> Transitioned from printing errors to using <code>messagebox</code> for displaying error messages and notifications, providing real-time feedback within the GUI.
+    </li>
+    <li class="modified">
+        <strong>Threaded Execution for Account Checks:</strong> Implemented threaded execution for the account checking process to keep the GUI responsive during long-running operations.
+    </li>
+    <li class="modified">
+        <strong>Global Variable Management:</strong> Introduced more global variables to handle new features and settings, ensuring better state management across functions.
+    </li>
+</ul>
+
+<h2>Removed Features</h2>
+<ul>
+    <li class="removed">
+        <strong>Unused Imports:</strong> Removed unnecessary imports such as <code>selenium.webdriver.chrome.service.Service</code> when not required, streamlining the codebase.
+    </li>
+    <li class="removed">
+        <strong>Redundant Functions:</strong> Eliminated redundant or obsolete functions that have been replaced by more advanced implementations in CODE 3.
+    </li>
+    <li class="removed">
+        <strong>Legacy GUI Elements:</strong> Removed old GUI elements that were incompatible with the new tabbed layout, ensuring a clean and organized user interface.
+    </li>
+    <li class="removed">
+        <strong>Simplistic Account Validation:</strong> Replaced simplistic account validation methods with more robust and flexible techniques, enhancing the accuracy of account checking.
+    </li>
+    <li class="removed">
+        <strong>Basic Error Handling:</strong> Phased out basic print-based error handling in favor of comprehensive error notifications and handling mechanisms.
+    </li>
+    <li class="removed">
+        <strong>Static Chromedriver Path:</strong> Removed the need to manually specify the Chromedriver path by integrating <code>webdriver-manager</code> for automatic driver management.
+    </li>
+</ul>
+
+<h2>Detailed Function Comparisons</h2>
+<h3>1. Pip Upgrade and Package Installation</h3>
+<ul>
+    <li class="modified">
+        <strong>CODE 2:</strong> Simple pip upgrade using <code>subprocess.check_call</code> with print statements for feedback.
+    </li>
+    <li class="modified">
+        <strong>CODE 3:</strong> Enhanced pip upgrade with <code>autoreset=True</code> in colorama for cleaner output. Introduced <code>update_pip()</code>, <code>install_or_upgrade_package()</code>, and <code>check_and_install_packages()</code> functions for more robust package management.
+    </li>
+</ul>
+
+<h3>2. Python Version Check</h3>
+<ul>
+    <li class="modified">
+        <strong>CODE 2:</strong> Prints a message and exits if Python version is not 3.11.8.
+    </li>
+    <li class="modified">
+        <strong>CODE 3:</strong> Uses <code>messagebox.showerror</code> to display error messages within the GUI before exiting, providing a more user-friendly notification mechanism.
+    </li>
+</ul>
+
+<h3>3. Browser Functions</h3>
+<ul>
+    <li class="added">
+        <strong>CODE 3:</strong> Introduced <code>load_chrome_extensions()</code> to load Chrome extensions dynamically from a specified folder, enhancing browser customization.
+    </li>
+    <li class="modified">
+        <strong>CODE 2:</strong> Provided basic functions to open different types of browsers using selenium and undetected_chromedriver.
+    </li>
+    <li class="modified">
+        <strong>CODE 3:</strong> Enhanced browser initialization with more configurable options such as incognito mode, headless mode, user agents, and Chromedriver arguments. Integrated <code>webdriver-manager</code> for automatic Chromedriver management, reducing manual setup.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Added <code>close_browser_instance()</code> to safely close the browser and reset the global <code>browser</code> variable, improving resource management.
+    </li>
+</ul>
+
+<h3>4. Account Checking Logic</h3>
+<ul>
+    <li class="modified">
+        <strong>CODE 2:</strong> Provided basic account checking logic with email/password entry and validation via CSS selectors.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Expanded the <code>check_account()</code> function to include:
+        <ul>
+            <li>Mouse click automation using <code>pyautogui</code>.</li>
+            <li>Sleep durations configurable per action stage.</li>
+            <li>Detection and handling of invalid accounts and CAPTCHA failures.</li>
+            <li>Capturing and saving additional account details like username and balance using CSS selectors.</li>
+            <li>Taking screenshots of valid accounts for documentation.</li>
+        </ul>
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Introduced <code>save_valid_account()</code> to store valid account details and screenshots, enhancing result tracking.
+    </li>
+    <li class="modified">
+        <strong>CODE 3:</strong> Refactored <code>check_accounts_logic()</code> to handle new settings like user agents, proxies with types and modes, and integrated invalid account and CAPTCHA handling.
+    </li>
+</ul>
+
+<h3>5. GUI Enhancements</h3>
+<ul>
+    <li class="added">
+        <strong>CODE 3:</strong> Redesigned the GUI to use a tabbed interface with categories:
+        <ul>
+            <li>General Settings</li>
+            <li>Invalid Account Implementation</li>
+            <li>CAPTCHA Handling</li>
+            <li>Proxy Settings</li>
+            <li>Browser Settings</li>
+            <li>Advanced Settings</li>
+            <li>Chromedriver Arguments</li>
+            <li>Mouse Click Automation</li>
+            <li>Configuration Menu</li>
+        </ul>
+        This organization improves user navigation and accessibility for various settings.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Integrated tooltips across all GUI elements using the <code>CreateToolTip</code> class, providing users with contextual help and guidance.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Added placeholders and better input validation for entry fields to enhance user experience and prevent input errors.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Implemented message boxes for error notifications and process completions, offering immediate feedback within the GUI.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Introduced threaded execution for account checking to keep the GUI responsive during intensive operations.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Added configuration management tabs for creating, importing, exporting, and saving configurations, providing users with flexibility in managing their settings.
+    </li>
+</ul>
+
+<h3>6. Configuration Management</h3>
+<ul>
+    <li class="modified">
+        <strong>CODE 2:</strong> Basic configuration functions for creating, importing, exporting, and saving configurations with limited settings.
+    </li>
+    <li class="modified">
+        <strong>CODE 3:</strong> Enhanced configuration functions to handle all new settings introduced, including invalid account checks, CAPTCHA handling, proxy settings, user agents, Chromedriver arguments, and mouse click automation.
+    </li>
+</ul>
+
+<h3>7. Database Management</h3>
+<ul>
+    <li class="modified">
+        <strong>CODE 2:</strong> Simple SQLite database setup with an <code>accounts</code> table tracking email, password, and checked status.
+    </li>
+    <li class="modified">
+        <strong>CODE 3:</strong> Improved database schema with <code>email</code> set as the primary key to prevent duplicate entries and ensure data integrity. Enhanced functions to mark accounts as checked and track additional details.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Introduced functions to save valid account details along with captured information like username and balance, and to store screenshots for comprehensive result tracking.
+    </li>
+</ul>
+
+<h3>8. Additional Utility Functions</h3>
+<ul>
+    <li class="added">
+        <strong>CODE 3:</strong> Added <code>CreateToolTip</code> class to facilitate tooltip creation for GUI elements, improving user guidance.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Introduced <code>save_valid_account()</code> to capture and store comprehensive account details, including taking screenshots with <code>PIL.ImageGrab</code>.
+    </li>
+    <li class="added">
+        <strong>CODE 3:</strong> Implemented better error handling and feedback mechanisms using colored console messages and GUI message boxes.
+    </li>
+</ul>
+
+<h2>Overall Impact</h2>
+<p>
+The transition from CODE 2 to CODE 3 represents a significant enhancement in functionality, user experience, and robustness. The addition of advanced proxy management, mouse click automation, custom user agents, and comprehensive configuration management empowers users with more control and flexibility. Enhanced browser initialization, error handling, and database management ensure that the script operates smoothly and efficiently. The redesigned GUI with tooltips and organized tabs makes the application more accessible and user-friendly, catering to both technical and non-technical users.
+</p>
+
+</body>
+</html>

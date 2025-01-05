@@ -1,0 +1,81 @@
+### **Summary of Comprehensive Changes**
+
+1. **Advanced Proxy Management:**
+   - **Addition:** Support for various proxy types (HTTP, HTTPS, SOCKS5) and modes (Static, Rotating).
+   - **Impact:** Enhanced flexibility and adaptability in different network environments.
+
+2. **Mouse Click Automation:**
+   - **Addition:** Automation of mouse clicks using `pyautogui`.
+   - **Impact:** Streamlines interactions with dynamic website elements, reducing manual input.
+
+3. **Custom User Agents:**
+   - **Addition:** Ability to load custom user agents from an external file.
+   - **Impact:** Increases stealth by mimicking diverse browsers and devices, reducing detection risk.
+
+4. **Chromedriver Arguments Management:**
+   - **Addition:** GUI for adding/removing Chromedriver command-line arguments.
+   - **Impact:** Grants users granular control over browser configurations.
+
+5. **CAPTCHA Handling:**
+   - **Addition:** Detection and handling of incorrect CAPTCHA inputs with logic to recheck accounts.
+   - **Impact:** Ensures continuity and reliability in account validation processes.
+
+6. **Invalid Account Detection Enhancements:**
+   - **Addition:** Multiple methods to detect invalid accounts, including redirect URL checks, CSS selectors for error alerts, and HTML content matching.
+   - **Impact:** Improves accuracy of account validation and reduces false positives.
+
+7. **Browser Cleanup Option:**
+   - **Addition:** Option to clean browser data after each account check (cookies, cache, localStorage, sessionStorage).
+   - **Impact:** Maintains user privacy and prevents data leakage between account checks.
+
+8. **Incognito and Headless Modes:**
+   - **Addition:** Options to run the browser in Incognito and Headless modes.
+   - **Impact:** Enhances privacy and performance based on user preferences.
+
+9. **Configuration Management:**
+   - **Addition:** Comprehensive configuration functions for creating, importing, exporting, and saving configurations.
+   - **Impact:** Facilitates easy setup and migration of user settings across different environments.
+
+10. **Pause/Resume and Force Stop Functionality:**
+    - **Addition:** GUI controls to pause/resume and force stop the account checking process.
+    - **Impact:** Provides users with immediate control over the script's execution flow.
+
+11. **Capture Additional Account Details:**
+    - **Addition:** Ability to capture and save additional details like username and balance using CSS selectors, along with taking screenshots.
+    - **Impact:** Offers a more detailed and informative account validation process.
+
+12. **Tooltip Integration:**
+    - **Addition:** Tooltips across GUI elements to guide users.
+    - **Impact:** Enhances usability and aids users in understanding various controls and inputs.
+
+13. **Configurable Sleep Durations:**
+    - **Addition:** Adjustable sleep times for different stages of the account checking process.
+    - **Impact:** Allows users to tailor the script's pacing based on network conditions and website responsiveness.
+
+14. **Error Handling Enhancements:**
+    - **Modification:** Transitioned from basic print statements to using GUI message boxes and colored console messages for better feedback.
+    - **Impact:** Improves user awareness of issues and enhances overall script robustness.
+
+15. **Enhanced Database Management:**
+    - **Modification:** Improved SQLite schema with `email` as the primary key and functions to handle comprehensive account details.
+    - **Impact:** Ensures data integrity and prevents duplicate entries.
+
+16. **Threaded Execution for Account Checks:**
+    - **Addition:** Implemented threaded execution to keep the GUI responsive during intensive account checking operations.
+    - **Impact:** Prevents the application from freezing and enhances user experience.
+
+17. **Screenshots for Valid Accounts:**
+    - **Addition:** Functionality to take screenshots of successful account validations.
+    - **Impact:** Provides visual confirmation and documentation of valid accounts.
+
+18. **Profile Selection Enhancements:**
+    - **Modification:** Improved profile selection GUI to handle cases with no available profiles, defaulting to "Default" and informing the user.
+    - **Impact:** Prevents runtime errors and ensures smooth browser initialization.
+
+19. **Utility Functions Enhancements:**
+    - **Addition:** Introduced the `CreateToolTip` class for managing tooltips and improved utility functions for better code maintainability.
+    - **Impact:** Enhances code readability and user guidance within the GUI.
+
+20. **Removed Features:**
+    - **Unused Imports:** Streamlined code by removing unnecessary imports.
+    - **Legacy Functions and GUI Elements:** Eliminated obsolete functions and GUI components in favor of more advanced implementations.
