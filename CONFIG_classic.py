@@ -217,7 +217,7 @@ def check_account(account, browser, website_link, valid_link, db_name):
 def check_accounts_logic(accounts, browser, website_link, valid_link, db_name):
     found_valid_account = False
 
-    user_data_dir = r"C:/Users/WormGPT/AppData/Local/Google/Chrome/User Data/Profile 1"
+    user_data_dir = r"C:/Users/CRACKING-BOX/AppData/Local/Google/Chrome/User Data/Profile 1"
 
     for index, account in enumerate(accounts):
         print(f"Checking account {index + 1}/{len(accounts)}")

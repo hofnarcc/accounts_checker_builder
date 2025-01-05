@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOFNAR05 - Universal Account Checker Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h2 {
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #c0392b;
+        }
+        .advertisement {
+            background-color: #f1c40f;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        .advertisement h1 {
+            text-align: left;
+            color: #ffffff;
+        }
+        .advertisement p {
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+        .advertisement a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HOFNAR05 - Universal Account Checker</h1>
+    <p>Welcome to the comprehensive guide for the HOFNAR05 Universal Account Checker. This document provides detailed instructions on the functionalities, configurations, and usage of the tool to ensure you maximize its capabilities.</p>
+
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#installation">Installation and Prerequisites</a></li>
+        <li><a href="#functions">Detailed Function Explanations</a></li>
+            <ul>
+                <li><a href="#pip-upgrade">1. Pip Upgrade and Package Installation</a></li>
+                <li><a href="#python-version">2. Python Version Check</a></li>
+                <li><a href="#database-management">3. Database Management</a></li>
+                <li><a href="#browser-functions">4. Browser Functions</a></li>
+                <li><a href="#account-checking">5. Account Checking Functions</a></li>
+                <li><a href="#gui-functions">6. GUI Functions</a></li>
+                <li><a href="#utility-functions">7. Utility Functions</a></li>
+                <li><a href="#chromedriver-arguments">8. Chromedriver Arguments Management</a></li>
+                <li><a href="#mouse-click-automation">9. Mouse Click Automation</a></li>
+                <li><a href="#pause-resume">10. Pause/Resume and Force Stop</a></li>
+                <li><a href="#profile-selection">11. Profile Selection</a></li>
+            </ul>
+        <li><a href="#usage">Using the GUI</a></li>
+        <li><a href="#advertisement">Advertisement</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+
+    <h2 id="introduction">Introduction</h2>
+    <p>The HOFNAR05 Universal Account Checker is a powerful tool designed to automate the process of verifying account credentials across various platforms. Utilizing advanced features such as proxy management, CAPTCHA handling, and customizable browser settings, it ensures efficient and secure account validation.</p>
+
+    <h2 id="installation">Installation and Prerequisites</h2>
+    <p>Before using the HOFNAR05 Universal Account Checker, ensure that your system meets the following requirements:</p>
+    <ul>
+        <li>Python 3.11.8</li>
+        <li>Google Chrome installed at <code>C:\Program Files\Google\Chrome\Application\chrome.exe</code></li>
+        <li>Stable internet connection</li>
+    </ul>
+    <p>The script will automatically check and install the necessary Python packages. However, ensure that you have administrative privileges to allow package installations and updates.</p>
+
+    <h2 id="functions">Detailed Function Explanations</h2>
+
+        <h3 id="pip-upgrade">1. Pip Upgrade and Package Installation</h3>
+        <ul>
+            <li><code>update_pip()</code>:
+                <p>Upgrades pip to the latest version using <code>subprocess</code>. Ensures that all package installations and upgrades proceed smoothly.</p>
+            </li>
+            <li><code>install_or_upgrade_package(package_name)</code>:
+                <p>Attempts to install a specified Python package. If the installation fails, it tries to upgrade the package. Provides console feedback using colored messages.</p>
+            </li>
+            <li><code>check_and_install_packages(package_list)</code>:
+                <p>Iterates through a list of required packages, checking if each is installed. If a package is missing, it installs or upgrades it using the aforementioned functions.</p>
+            </li>
+        </ul>
+
+        <h3 id="python-version">2. Python Version Check</h3>
+        <ul>
+            <li><code>check_python_version()</code>:
+                <p>Verifies that Python version 3.11.8 is installed. If not, it displays an error message via a GUI <code>messagebox</code> and exits the program.</p>
+            </li>
+        </ul>
+
+        <h3 id="database-management">3. Database Management</h3>
+        <ul>
+            <li><code>setup_database(db_name)</code>:
+                <p>Initializes an SQLite database with the specified name. Creates a table named <code>accounts</code> if it doesn't already exist, designed to store account email, password, and a checked status.</p>
+            </li>
+            <li><code>account_already_checked(account, db_name)</code>:
+                <p>Checks if a given account (email and password) has already been verified within the database to avoid redundant processing.</p>
+            </li>
+            <li><code>mark_account_checked(email, password, db_name)</code>:
+                <p>Updates the database to mark an account as checked, preventing it from being processed again.</p>
+            </li>
+        </ul>
+
+        <h3 id="browser-functions">4. Browser Functions</h3>
+        <ul>
+            <li><code>load_chrome_extensions(options)</code>:
+                <p>Loads Chrome extensions from the <code>chrome_extensions</code> folder into the browser session. Useful for adding functionalities or bypassing certain web restrictions.</p>
+            </li>
+            <li><code>open_undetected_browser_with_options(...)</code>:
+                <p>Launches an undetected Chrome browser instance with customizable options such as incognito mode, headless mode, user agents, and additional Chromedriver arguments. Integrates <code>webdriver-manager</code> for automatic Chromedriver management.</p>
+            </li>
+            <li><code>close_browser_instance()</code>:
+                <p>Safely closes the currently active browser instance to free system resources and ensure clean termination of browser sessions.</p>
+            </li>
+        </ul>
+
+        <h3 id="account-checking">5. Account Checking Functions</h3>
+        <ul>
+            <li><code>check_account(...)</code>:
+                <p>Performs the primary function of verifying an individual account. It navigates to the target website, inputs the provided email and password, handles potential CAPTCHA challenges, and determines the validity of the account based on URL redirections and HTML content.</p>
+            </li>
+            <li><code>check_accounts_logic(...)</code>:
+                <p>Processes a list of accounts by iterating through each one, managing proxies, initiating browser sessions, and invoking <code>check_account()</code> for verification. Handles user agent rotation and integrates invalid account and CAPTCHA handling settings.</p>
+            </li>
+            <li><code>run_account_checks(...)</code>:
+                <p>Executes the account checking process in a separate thread to maintain the responsiveness of the GUI. Provides user feedback upon completion or in case of errors.</p>
+            </li>
+            <li><code>save_valid_account(...)</code>:
+                <p>Saves valid account details, including additional information like username and balance, to designated files. Takes screenshots of successful sessions for documentation and auditing purposes.</p>
+            </li>
+        </ul>
+
+        <h3 id="gui-functions">6. GUI Functions</h3>
+        <ul>
+            <li><code>gui_check_accounts()</code>:
+                <p>Handles the "Check Accounts" button click event. It gathers all user inputs from the GUI, validates them, parses the account list, and initiates the account checking process by starting a new thread.</p>
+            </li>
+            <li><code>import_proxies_from_file()</code>:
+                <p>Allows users to import a list of proxies from a selected text file. Supports proxies with or without authentication and stores them for use during account checking.</p>
+            </li>
+            <li><code>select_user_agents_file()</code>:
+                <p>Enables users to select a custom user agents file, which the script will use to rotate user agents, enhancing stealth and reducing the chance of detection.</p>
+            </li>
+            <li><code>create_config()</code>, <code>import_config()</code>, <code>export_config()</code>, <code>save_config_state()</code>, <code>load_config_data()</code>, <code>save_config_data()</code>, <code>reset_to_default()</code>:
+                <p>Manage configuration settings through the GUI. Users can create new configurations, import existing ones, export current settings, save the state, load configurations, and reset all parameters to their default values.</p>
+            </li>
+        </ul>
+
+        <h3 id="utility-functions">7. Utility Functions</h3>
+        <ul>
+            <li><code>CreateToolTip(object)</code>:
+                <p>Class that creates tooltips for various GUI widgets, providing users with contextual information and guidance.</p>
+            </li>
+            <li><code>print_action(message)</code>, <code>print_checkpoint(delay)</code>, <code>countdown_sleep(seconds)</code>:
+                <p>Utility functions that handle colored console outputs and sleep durations with countdowns. Enhance user feedback and control over script execution pacing.</p>
+            </li>
+        </ul>
+
+        <h3 id="chromedriver-arguments">8. Chromedriver Arguments Management</h3>
+        <ul>
+            <li><code>add_chromedriver_argument()</code>, <code>remove_chromedriver_argument()</code>:
+                <p>Allow users to add or remove custom Chromedriver command-line arguments through the GUI. Provides flexibility to modify browser behavior as needed.</p>
+            </li>
+        </ul>
+
+        <h3 id="mouse-click-automation">9. Mouse Click Automation</h3>
+        <ul>
+            <li><code>add_mouse_click_action_extended()</code>, <code>remove_mouse_click_action_extended(frame)</code>:
+                <p>Enable users to define specific mouse click actions by specifying coordinates, the number of clicks, and intervals. Automates interactions with web elements that require mouse actions.</p>
+            </li>
+        </ul>
+
+        <h3 id="pause-resume">10. Pause/Resume and Force Stop</h3>
+        <ul>
+            <li><code>pause_resume()</code>:
+                <p>Toggles the pause and resume state of the account checking process. Allows users to temporarily halt execution without terminating the entire script.</p>
+            </li>
+            <li><code>force_stop()</code>:
+                <p>Provides a means to immediately stop the account checking process. Safely terminates browser instances and resets control flags.</p>
+            </li>
+        </ul>
+
+        <h3 id="profile-selection">11. Profile Selection</h3>
+        <ul>
+            <li><code>select_profile()</code>:
+                <p>Facilitates the selection of a specific Chrome profile to be used during browser automation. Ensures that the correct user data and settings are applied during account verification.</p>
+            </li>
+        </ul>
+
+    <h2 id="usage">Using the GUI</h2>
+    <p>The HOFNAR05 Universal Account Checker features a user-friendly GUI organized into multiple tabs, each dedicated to specific settings and functionalities. Below is a guide on how to navigate and utilize each section:</p>
+
+    <h3>1. General Settings</h3>
+    <p>Configure the essential parameters required for account checking:</p>
+    <ul>
+        <li><strong>Website Target Link:</strong> The URL of the website where account verification will be performed.</li>
+        <li><strong>Website Valid Link:</strong> The URL breakpoint indicating a successful login.</li>
+        <li><strong>Redirect URL:</strong> Optional URL to handle specific redirections during login.</li>
+        <li><strong>CSS Selector for Email / Username:</strong> The CSS selector targeting the email or username input field.</li>
+        <li><strong>Sleep Duration for Email Field:</strong> Time in seconds the script waits before interacting with the email field.</li>
+        <li><strong>CSS Selector for Password:</strong> The CSS selector targeting the password input field.</li>
+        <li><strong>Sleep Duration for Password Field:</strong> Time in seconds the script waits before interacting with the password field.</li>
+        <li><strong>CSS Selector for Submit / Login Button:</strong> The CSS selector targeting the submit or login button.</li>
+        <li><strong>Sleep Duration for Submit Button:</strong> Time in seconds the script waits before clicking the submit button.</li>
+        <li><strong>CSS Selector for Next Button:</strong> Optional CSS selector for websites with a multi-step login process.</li>
+        <li><strong>CSS Selector for Username:</strong> Optional CSS selector to capture the username from the validated account.</li>
+        <li><strong>CSS Selector for Balance:</strong> Optional CSS selector to capture the account balance.</li>
+        <li><strong>Speed %:</strong> Determines the pacing of the script's actions, affecting delays and timeouts.</li>
+        <li><strong>2FA Valid Link:</strong> Optional URL pattern to handle accounts requiring two-factor authentication.</li>
+    </ul>
+
+    <h3>2. Invalid Account Implementation</h3>
+    <p>Set up the criteria for identifying invalid accounts:</p>
+    <ul>
+        <li><strong>Enable Invalid Account Checks:</strong> Toggle to activate invalid account detection.</li>
+        <li><strong>Redirect Detection URL:</strong> URL that indicates an account has been redirected due to invalid credentials.</li>
+        <li><strong>Error/Alert Detection CSS Selector:</strong> CSS selector targeting error messages or alerts on the webpage.</li>
+        <li><strong>Inner HTML Text:</strong> Specific text within the HTML that signifies an invalid account.</li>
+        <li><strong>Outer HTML Text:</strong> Specific outer HTML content that signifies an invalid account.</li>
+    </ul>
+
+    <h3>3. CAPTCHA Incorrect Implementation</h3>
+    <p>Configure how the script handles incorrect CAPTCHA entries:</p>
+    <ul>
+        <li><strong>Enable CAPTCHA Incorrect Checks:</strong> Toggle to activate CAPTCHA handling.</li>
+        <li><strong>Redirect Detection URL:</strong> URL indicating a CAPTCHA failure and prompting a recheck.</li>
+        <li><strong>Error/Alert Detection CSS Selector:</strong> CSS selector targeting CAPTCHA error messages.</li>
+        <li><strong>Inner HTML Text:</strong> Specific text within the HTML that signifies a CAPTCHA failure.</li>
+        <li><strong>Outer HTML Text:</strong> Specific outer HTML content that signifies a CAPTCHA failure.</li>
+    </ul>
+
+    <h3>4. Proxy Settings</h3>
+    <p>Manage proxy configurations to mask your IP and avoid detection:</p>
+    <ul>
+        <li><strong>Enable Proxy:</strong> Toggle to activate proxy usage.</li>
+        <li><strong>Proxy Type:</strong> Select the type of proxy (HTTP, HTTPS, SOCKS5).</li>
+        <li><strong>Proxy Mode:</strong> Choose between Static Proxies (same proxy for all accounts) or Rotating Proxies (different proxies for each account).</li>
+        <li><strong>Import Proxies from File:</strong> Load a list of proxies from a text file into the application.</li>
+    </ul>
+
+    <h3>5. Browser Settings</h3>
+    <p>Customize browser behavior for optimal performance and privacy:</p>
+    <ul>
+        <li><strong>Clean Browser Data After Each Account:</strong> Toggle to clear cookies, cache, and local storage after each account check.</li>
+        <li><strong>Run Browser in Incognito Mode:</strong> Toggle to start the browser in incognito mode for enhanced privacy.</li>
+    </ul>
+
+    <h3>6. Advanced Settings</h3>
+    <p>Access additional configurations for more control over the browsing session:</p>
+    <ul>
+        <li><strong>Load Chrome Extensions:</strong> Toggle to load extensions from the <code>chrome_extensions</code> folder.</li>
+        <li><strong>Disable Browser Notifications:</strong> Prevent pop-up notifications from appearing during the session.</li>
+        <li><strong>Disable Infobars:</strong> Remove informational bars from the browser interface.</li>
+        <li><strong>Start Browser Maximized:</strong> Configure the browser window to open in maximized mode.</li>
+        <li><strong>Disable Browser Extensions:</strong> Disable all browser extensions to prevent interference.</li>
+        <li><strong>Run Browser in Headless Mode:</strong> Execute the browser without a visible UI for better performance.</li>
+        <li><strong>Use Custom User Agents:</strong> Toggle to use custom user agents loaded from a specified file.</li>
+        <li><strong>Select User Agents File:</strong> Load a text file containing custom user agents for rotation.</li>
+    </ul>
+
+    <h3>7. Chromedriver Arguments Management</h3>
+    <p>Add or remove specific Chromedriver command-line arguments to modify browser behavior:</p>
+    <ul>
+        <li><strong>Add Chromedriver Argument:</strong> Input a command-line argument (e.g., <code>--disable-gpu</code>) and add it to the list.</li>
+        <li><strong>Remove Selected Argument(s):</strong> Select and remove previously added Chromedriver arguments from the list.</li>
+        <li><strong>Chromedriver Arguments List:</strong> View all currently active Chromedriver arguments.</li>
+        <li><strong>Find Chromium Command-Line Switches:</strong> Provides a link to reference additional Chromium command-line switches.</li>
+    </ul>
+
+    <h3>8. Mouse Click Automation</h3>
+    <p>Automate mouse clicks at specific screen coordinates to interact with dynamic webpage elements:</p>
+    <ul>
+        <li><strong>Enable Mouse Click Automation:</strong> Toggle to activate mouse click actions during account checks.</li>
+        <li><strong>Add Click Action:</strong> Define a new mouse click action by specifying the X and Y coordinates, number of clicks, and interval between clicks.</li>
+        <li><strong>Remove Click Action:</strong> Delete a previously defined mouse click action.</li>
+    </ul>
+
+    <h3>9. Pause/Resume and Force Stop</h3>
+    <ul>
+        <li><strong>Pause/Resume Button:</strong> Click to pause the ongoing account checking process or resume it if paused.</li>
+        <li><strong>Force Stop Button:</strong> Immediately terminate all account checking operations and close browser instances.</li>
+    </ul>
+
+    <h3>10. Profile Selection</h3>
+    <p>Select the Chrome profile to be used during browser automation:</p>
+    <ul>
+        <li><strong>Select Chrome Profile:</strong> Choose from available Chrome profiles to ensure the correct user data is applied during account verification.</li>
+    </ul>
+
+    <h2 id="advertisement">Advertisement</h2>
+    <div class="advertisement">
+        <h1>Info</h1>
+        
+        <p>💲 FRAUD SHOP SINCE 2018:</p>
+        <a href="https://hofnar05.live" target="_blank">https://hofnar05.live</a>
+        
+        <p>✳️ LEAKS + VOUCH (Telegram Group):</p>
+        <a href="https://t.me/BENUMBZ" target="_blank">https://t.me/BENUMBZ</a>
+        
+        <p>💳 CC DROP + KILL (Telegram Group):</p>
+        <a href="https://t.me/+-zyCVjb-SR4zNDNk" target="_blank">https://t.me/+-zyCVjb-SR4zNDNk</a>
+        
+        <p>👥 hofnar05 Dark AI (Telegram Group):</p>
+        <a href="https://t.me/hofnar05_Dark_GPT" target="_blank">https://t.me/hofnar05_Dark_GPT</a>
+        
+        <p>🤖 hofnar05 Worm-GPT (Telegram AI Bot):</p>
+        <a href="https://t.me/hofnar05_Worm_GPT_bot" target="_blank">https://t.me/hofnar05_Worm_GPT_bot</a>
+    </div>
+
+    <h2 id="conclusion">Conclusion</h2>
+    <p>The HOFNAR05 Universal Account Checker is a robust and versatile tool designed to simplify the process of account verification across various platforms. By leveraging advanced functionalities such as proxy management, CAPTCHA handling, and customizable browser settings, it offers users a comprehensive solution for efficient and secure account checking.</p>
+    <p>Ensure that you adhere to ethical guidelines and legal standards when using this tool. Unauthorized access to accounts can lead to severe legal consequences.</p>
+    <p>For further assistance or to join our Telegram groups for updates and support, refer to the advertisement section above.</p>
+
+    <div class="footer">
+        <p>&copy; 2024 HOFNAR05. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
