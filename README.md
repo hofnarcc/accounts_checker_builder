@@ -11,10 +11,12 @@
 - **Invalid Account Detection**: Marks invalid accounts and stores them in a separate database.
 - **Captcha Handling**: Detects wrong captcha entries and allows re-checking for the same account.
 
-New settings, menu, capture options, all possible options:
+### New settings, menu, capture options, all possible options:
+
 ![Account Checker in Action](https://i.ibb.co/5xbRcs6/account-checker-builder.gif)
 
-Capture valid accounts and send the results via Telegram:
+### Capture valid accounts and send the results via Telegram:
+
 ![Results via Telegram](https://i.ibb.co/p0hwRMz/account-checker-builder2.gif)
 
 
