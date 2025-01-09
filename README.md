@@ -1,62 +1,100 @@
+
+
 # HOFNAR05 Universal Account Checker Builder 📢💻
 
 
-2025 - NEW RELEASE!
+## Direct Download Link
+[Download HOFNAR05 Universal Account Checker Builder v1.6.8](https://github.com/hofnarcc/accounts_checker_builder/releases/download/v1.6.7/HOFNAR05.-.UNIVERSAL.ACCOUT.CHECKER.BUILDER.v1.6.8.zip)
 
-Now includes checks for the following:
-- Marks invalid accounts and puts these in a separate invalid database.
-- Whenever a wrong captcha code input has been detected. (Re-check of same account)
+## 🚀 2025 - New Release!
+**New Features**:
+- **Invalid Account Detection**: Marks invalid accounts and stores them in a separate database.
+- **Captcha Handling**: Detects wrong captcha entries and allows re-checking for the same account.
 
+![Account Checker in Action](https://i.ibb.co/5xbRcs6/account-checker-builder.gif)
+[Telegram Group](https://t.me/hofnar05_Dark_GPT)
 
-<a href="https://t.me/hofnar05_Dark_GPT"><img src="https://i.ibb.co/5xbRcs6/account-checker-builder.gif" alt="HOFNAR05" border="0"></a>
+![Results via Telegram](https://i.ibb.co/p0hwRMz/account-checker-builder2.gif)
+[Telegram Group](https://t.me/hofnar05_Dark_GPT)
 
-- Sends ANY wanted results such as: logins and their account Balance (or any other information that you want to include in the results) to a given Telegram bot:
+### Say goodbye to frustrating config searches! 
+**Build custom configs effortlessly, no coding needed! 🛠️**
 
-<a href="https://hofnar05.club"><img src="https://i.ibb.co/p0hwRMz/account-checker-builder2.gif" alt="gpt" border="0"></a>
-
-
-And many more options and features!
-
-
-2024 - CLASSIC RELEASE :
-
-<a href="https://t.me/hofnar05_Dark_GPT"><img src="https://i.ibb.co/Gckwdr6/HOFNAR05-UNIVERSAL-ACCOUNT-CHECKER-BUILDER-text.gif" alt="HOFNAR05" border="0"></a>
-<a href="https://hofnar05.club"><img src="https://i.ibb.co/j5Ksp2Y/gpt.gif" alt="gpt" border="0"></a>
-
-
-
-Say goodbye to the frustrating search for active configs across platforms. It's time to embrace efficiency! 🤔 🌟
-
-**Build custom configs effortlessly, no coding needed!**
-
-Our cutting-edge AI-powered Python script simplifies account validation on modern platforms:
-
-- Paypal 💳
-- Card shops 🛒
-- Banks 🏦
+Our cutting-edge, AI-powered Python script simplifies account validation across modern platforms including:
+- **Paypal** 💳
+- **Card Shops** 🛒
+- **Banks** 🏦
 
 ## How It Works
-- **User-Friendly GUI:** An intuitive interface for easy configuration. Input website links, CSS selectors, and credentials.
-- **Selenium Integration:** Selenium launches Chrome, navigates to sites, and checks credentials.
-- **Custom Validity Checks:** Define custom valid links with wildcards. If the URL matches, the account is valid, ideal for dynamic URLs.
-- **Database Management:** Store checked accounts locally in SQLite for quick access.
-- **Proxy Support:** Manage proxies - enable, import, and rotate for anonymity.
-- **Python Compatibility:** Ensure compatibility and get guidance for upgrades.
+- **User-Friendly GUI**: An intuitive interface for configuring websites, inputting CSS selectors, and managing credentials.
+- **Selenium Integration**: Utilizes Selenium to launch Chrome, navigate sites, and check credentials dynamically.
+- **Custom Validity Checks**: Support for configuring custom valid URLs with wildcard matching. Perfect for dynamic websites.
+- **Database Management**: Store checked accounts locally in SQLite for easy access.
+- **Proxy Support**: Flexibility to manage proxies including enabling, importing, and rotation for anonymity.
+- **Video Tutorials**: Comprehensive guides are available to enhance your experience.
 
 ## Additional Features 📣
-- **Import/Export Configs:** Save and load configurations effortlessly.
-- **Speed Control:** Adjust checking speed as needed.
-- **Error Handling:** Robust error handling provides clear feedback.
+- **Import/Export Configurations**: Easily save and load your configurations.
+- **Adjustable Speed Control**: Set your desired checking speed.
+- **Robust Error Handling**: Receive clear feedback on errors encountered during operations.
+- **Custom User-Agent Rotation**: Use custom user agents for added flexibility.
+- **Screenshot Capture**: Optionally capture screenshots when retrieving account information.
 
-**HOFNAR05 Universal Account Checker Builder** simplifies account checking, making it a breeze! 💻🔒
-
-Create configs in minutes, saving valuable time! ⌛
-
-Start using it now and enhance your online security! 🌐🚀
-
-**Highlight:** This tool is free, open-source, and includes video tutorials! 📹
+### **Highlight**: 
+This tool is **free and open source**! It comes with comprehensive video tutorials to get you started. 📹
 
 [DOWNLOAD NOW](https://t.me/hofnar05_Dark_GPT/46/50404)
+
+### Contributions and Feedback
+We appreciate contributions, feedback, and suggestions! 🌟
+
+## Features List
+1. **Invalid Account Handling**:
+   - Automatically marks invalid accounts and saves them in the database.
+   - Option to detect incorrect captcha entries and allow re-checks.
+  
+2. **Account Results**: 
+   - Send any desired results (like logins and their account balance) to a specified Telegram bot.
+
+3. **Custom Configuration Options**:
+   - Create tailored configuration files with no coding required. 
+   - Broad support for various platforms including e-commerce and banking sites.
+
+4. **Database Management**:
+   - SQLite integration for storing previously checked accounts.
+   - Option to toggle database usage.
+   
+5. **Proxy Management**:
+   - Support for static and rotating proxies.
+   - Custom user agent utilization and proxy rotation to enhance security.
+
+6. **User Interface Enhancements**:
+   - Intuitive GUI that provides easy navigation and configuration setup.
+   - Built-in examples and tooltips for guidance.
+
+7. **Advanced Functionality**:
+   - Error handling with clear console feedback.
+   - Capture additional data, including inner and outer HTML, for in-depth checks.
+   - Screenshot capture for accounts upon success.
+
+8. **Flexible Sleep Durations**: 
+   - Customize sleep durations for various parts of the checking process.
+
+## Getting Started
+To get started with **HOFNAR05 Universal Account Checker Builder**, ensure you have Python 3.11.8 and required packages installed. Follow the installation instructions provided, which will guide you through setting up necessary libraries and dependencies.
+
+## Installation
+1. **Prerequisites**:
+   - Make sure you have Python 3.11.8 installed. Download it from [python.org](https://www.python.org/downloads/release/python-3118/).
+  
+2. **Install Required Packages**:
+   ```bash
+   pip install colorama selenium requests chromedriver-autoinstaller Pillow pyautogui
+
+
+
+
+
 
 
 
