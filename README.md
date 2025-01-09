@@ -11,11 +11,13 @@
 - **Invalid Account Detection**: Marks invalid accounts and stores them in a separate database.
 - **Captcha Handling**: Detects wrong captcha entries and allows re-checking for the same account.
 
+New settings, menu, capture options, all possible options:
 ![Account Checker in Action](https://i.ibb.co/5xbRcs6/account-checker-builder.gif)
-[Telegram Group](https://t.me/hofnar05_Dark_GPT)
 
+Capture valid accounts and send the results via Telegram:
 ![Results via Telegram](https://i.ibb.co/p0hwRMz/account-checker-builder2.gif)
-[Telegram Group](https://t.me/hofnar05_Dark_GPT)
+
+
 
 ### Say goodbye to frustrating config searches! 
 **Build custom configs effortlessly, no coding needed! 🛠️**
@@ -43,10 +45,6 @@ Our cutting-edge, AI-powered Python script simplifies account validation across 
 ### **Highlight**: 
 This tool is **free and open source**! It comes with comprehensive video tutorials to get you started. 📹
 
-[DOWNLOAD NOW](https://t.me/hofnar05_Dark_GPT/46/50404)
-
-### Contributions and Feedback
-We appreciate contributions, feedback, and suggestions! 🌟
 
 ## Features List
 1. **Invalid Account Handling**:
@@ -97,5 +95,3 @@ To get started with **HOFNAR05 Universal Account Checker Builder**, ensure you h
 
 
 
-
-We appreciate contributions, feedback, and suggestions! 🌟
