@@ -1,5 +1,25 @@
 # HOFNAR05 Universal Account Checker Builder 📢💻
 
+
+2025 - NEW RELEASE!
+
+Now includes checks for the following:
+- Marks invalid accounts and puts these in a separate invalid database.
+- Whenever a wrong captcha code input has been detected. (Re-check of same account)
+
+
+<a href="https://t.me/hofnar05_Dark_GPT"><img src="https://i.ibb.co/5xbRcs6/account-checker-builder.gif" alt="HOFNAR05" border="0"></a>
+
+- Sends ANY wanted results such as: logins and their account Balance (or any other information that you want to include in the results) to a given Telegram bot:
+
+<a href="https://hofnar05.club"><img src="https://i.ibb.co/p0hwRMz/account-checker-builder2.gif" alt="gpt" border="0"></a>
+
+
+And many more options and features!
+
+
+2024 - CLASSIC RELEASE :
+
 <a href="https://t.me/hofnar05_Dark_GPT"><img src="https://i.ibb.co/Gckwdr6/HOFNAR05-UNIVERSAL-ACCOUNT-CHECKER-BUILDER-text.gif" alt="HOFNAR05" border="0"></a>
 <a href="https://hofnar05.club"><img src="https://i.ibb.co/j5Ksp2Y/gpt.gif" alt="gpt" border="0"></a>
 
