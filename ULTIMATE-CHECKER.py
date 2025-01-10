@@ -92,9 +92,84 @@ db_name = "checked_accounts.db"
 pause_event = threading.Event()
 stop_event = threading.Event()
 
+
+
+
+# Add to global variables section
+var_method_type = tk.StringVar(value="Method 1")  # For toggle between methods
+selected_directory = tk.StringVar()  # For storing selected directory path
+
+# Add to the General Settings tab
+def create_method_selection():
+    method_frame = ttk.LabelFrame(frame_general, text="Account Check Method")
+    method_frame.grid(column=0, row=len(general_settings) + 1, columnspan=2, padx=10, pady=5, sticky="ew")
+    
+    ttk.Radiobutton(method_frame, text="Method 1 (Line by Line)", 
+                   variable=var_method_type, value="Method 1").pack(side=tk.LEFT, padx=5)
+    ttk.Radiobutton(method_frame, text="Method 2 (Directory Scan)", 
+                   variable=var_method_type, value="Method 2").pack(side=tk.LEFT, padx=5)
+    
+    dir_frame = ttk.Frame(method_frame)
+    dir_frame.pack(fill=tk.X, padx=5, pady=5)
+    
+    ttk.Label(dir_frame, text="Directory:").pack(side=tk.LEFT, padx=5)
+    entry_directory = ttk.Entry(dir_frame, textvariable=selected_directory, width=50)
+    entry_directory.pack(side=tk.LEFT, padx=5)
+    
+    ttk.Button(dir_frame, text="Browse", command=select_directory).pack(side=tk.LEFT, padx=5)
+
+def select_directory():
+    directory = filedialog.askdirectory()
+    if directory:
+        selected_directory.set(directory)
+
+
 # -------------------
 # Helper Classes and Functions
 # -------------------
+
+
+def scan_directory_for_accounts():
+    """Scans directory for password.txt and cookies."""
+    accounts = []
+    cookies = {}
+    
+    root_dir = selected_directory.get()
+    if not root_dir:
+        messagebox.showerror("Error", "Please select a directory first")
+        return None, None
+        
+    for root, dirs, files in os.walk(root_dir):
+        # Check for passwords.txt
+        if "passwords.txt" in files:
+            with open(os.path.join(root, "passwords.txt"), 'r', encoding='utf-8') as f:
+                for line in f:
+                    if ':' in line:
+                        email, password = line.strip().split(':', 1)
+                        accounts.append((email, password))
+        
+        # Check for cookies folder
+        if "cookies" in dirs:
+            cookies_dir = os.path.join(root, "cookies")
+            for cookie_file in os.listdir(cookies_dir):
+                if cookie_file.endswith('.txt'):
+                    with open(os.path.join(cookies_dir, cookie_file), 'r', encoding='utf-8') as f:
+                        cookie_data = f.read()
+                        account_id = cookie_file.replace('.txt', '')
+                        cookies[account_id] = cookie_data
+                        
+    return accounts, cookies
+
+def load_cookies_to_browser(browser, cookie_data):
+    """Loads cookies into the browser."""
+    try:
+        cookie_list = json.loads(cookie_data)
+        for cookie in cookie_list:
+            browser.add_cookie(cookie)
+        return True
+    except Exception as e:
+        print_action(f"{Fore.RED}Error loading cookies: {e}{Style.RESET_ALL}")
+        return False
 
 
 class CreateToolTip:
@@ -554,6 +629,35 @@ def close_browser_instance():
 # -------------------
 # Account Checking Logic
 # -------------------
+
+def check_accounts_logic(accounts, *args, **kwargs):
+    """Modified to handle both methods."""
+    if var_method_type.get() == "Method 2":
+        accounts, cookies = scan_directory_for_accounts()
+        if not accounts:
+            messagebox.showerror("Error", "No accounts found in the selected directory")
+            return
+            
+        for account in accounts:
+            email, password = account
+            
+            # Get corresponding cookie if exists
+            cookie_data = cookies.get(email)
+            
+            browser_instance = open_undetected_browser_with_options(
+                user_data_dir, profile_name, **kwargs
+            )
+            
+            if cookie_data:
+                # Load cookies before checking account
+                browser_instance.get(kwargs.get('website_target_link'))
+                if load_cookies_to_browser(browser_instance, cookie_data):
+                    print_action(f"{Fore.GREEN}Loaded cookies for {email}{Style.RESET_ALL}")
+                    
+            # Proceed with normal account checking
+            check_account(account, browser_instance, *args, **kwargs)
+            
+
 def check_account(
     account,
     browser,
@@ -1157,8 +1261,12 @@ def get_entry_value(entry):
     else:
         return value
 
-
 def gui_check_accounts():
+    """Modified to handle both methods."""
+    if var_method_type.get() == "Method 2" and not selected_directory.get():
+        messagebox.showerror("Error", "Please select a directory for Method 2")
+        return
+
     """Handles the Check Accounts button click."""
     website_target_link = get_entry_value(entry_website_target_link)
     website_valid_link = get_entry_value(entry_website_valid_link)
