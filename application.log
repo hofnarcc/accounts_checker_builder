@@ -585,3 +585,61 @@ Version: 4.26.1
 Version: 0.4.6
 2025-01-03 08:45:20,511 - INFO - All required packages are up to date.
 2025-01-04 16:40:31,589 - INFO - Executed script: ULTIMATE-CHECKER.py
+2025-12-23 15:24:43,291 - INFO - Python version is 3.11.8.
+2025-12-23 15:24:45,205 - INFO - undetected-chromedriver not found. Attempting to install.
+2025-12-23 15:24:45,212 - INFO - webdriver-manager not found. Attempting to install.
+2025-12-23 15:24:45,235 - INFO - tk not found. Attempting to install.
+2025-12-23 15:24:45,884 - INFO - Name: pillow
+Version: 12.0.0
+2025-12-23 15:24:45,886 - INFO - Name: requests
+Version: 2.32.5
+2025-12-23 15:24:45,892 - INFO - Name: selenium
+Version: 4.39.0
+2025-12-23 15:24:45,900 - INFO - Name: colorama
+Version: 0.4.6
+2025-12-23 15:24:45,906 - INFO - Name: PyAutoGUI
+Version: 0.9.54
+2025-12-23 15:24:48,657 - INFO - tk package installed successfully.
+2025-12-23 15:24:49,613 - INFO - webdriver-manager package installed successfully.
+2025-12-23 15:24:56,011 - INFO - undetected-chromedriver package installed successfully.
+2025-12-23 15:24:56,011 - INFO - All required packages are up to date.
+2025-12-23 15:33:49,007 - INFO - Opened info.html in the default browser.
+2025-12-23 15:50:34,977 - INFO - Executed script: combo_stripper.py
+2025-12-23 16:30:25,457 - INFO - Python version is 3.11.8.
+2025-12-23 16:30:26,665 - INFO - Name: requests
+Version: 2.32.5
+2025-12-23 16:30:26,665 - INFO - Name: PyAutoGUI
+Version: 0.9.54
+2025-12-23 16:30:26,700 - INFO - Name: selenium
+Version: 4.39.0
+2025-12-23 16:30:26,700 - INFO - Name: pillow
+Version: 12.0.0
+2025-12-23 16:30:26,700 - INFO - Name: webdriver-manager
+Version: 4.0.2
+2025-12-23 16:30:26,700 - INFO - Name: colorama
+Version: 0.4.6
+2025-12-23 16:30:26,708 - INFO - Name: undetected-chromedriver
+Version: 3.5.5
+2025-12-23 16:30:26,708 - INFO - Name: tk
+Version: 0.1.0
+2025-12-23 16:30:26,708 - INFO - All required packages are up to date.
+2025-12-23 20:28:23,227 - INFO - Python version is 3.11.8.
+2025-12-23 20:28:23,886 - INFO - Name: colorama
+Version: 0.4.6
+2025-12-23 20:28:23,886 - INFO - Name: tk
+Version: 0.1.0
+2025-12-23 20:28:23,894 - INFO - Name: requests
+Version: 2.32.5
+2025-12-23 20:28:23,894 - INFO - Name: pillow
+Version: 12.0.0
+2025-12-23 20:28:23,896 - INFO - Name: selenium
+Version: 4.39.0
+2025-12-23 20:28:23,898 - INFO - Name: webdriver-manager
+Version: 4.0.2
+2025-12-23 20:28:23,908 - INFO - Name: undetected-chromedriver
+Version: 3.5.5
+2025-12-23 20:28:23,915 - INFO - Name: PyAutoGUI
+Version: 0.9.54
+2025-12-23 20:28:23,915 - INFO - All required packages are up to date.
+2025-12-23 20:28:34,080 - INFO - Executed script: ULTIMATE-CHECKER.py
+2025-12-23 20:31:07,064 - INFO - Executed script: check_account.py
